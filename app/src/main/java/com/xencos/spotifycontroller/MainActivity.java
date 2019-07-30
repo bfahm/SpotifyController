@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
     private ImageView skipPrev;
     private ImageView skipNext;
 
-    private AudioJackReceiver jackReceiver;
+    //private AudioJackReceiver jackReceiver;
 
     @Override
     protected void onPause() {
-        unregisterReceiver(jackReceiver);
+//        unregisterReceiver(jackReceiver);
         super.onPause();
     }
 
@@ -68,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
         data.add("Gym All the way");
         wheelPicker.setData(data);
 
-        jackReceiver = new AudioJackReceiver();
+        //jackReceiver = new AudioJackReceiver();
     }
 
     @Override
     protected void onResume() {
-        IntentFilter filter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
-        registerReceiver(jackReceiver, filter);
+  //      IntentFilter filter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
+    //    registerReceiver(jackReceiver, filter);
         super.onResume();
     }
 
